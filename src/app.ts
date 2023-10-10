@@ -54,3 +54,15 @@ function sumAll(message: string, ...arr: number[]) {
 }
 //console.log(sumAll('Hello', 1, 2, 3));
 
+const person = {
+    name: 'Asad',
+    age: 20
+};
+type Person = typeof person;
+type PersonKeys = keyof Person;
+type PersonTypes = Person[PersonKeys];
+
+
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+    return obj[key];
+}
